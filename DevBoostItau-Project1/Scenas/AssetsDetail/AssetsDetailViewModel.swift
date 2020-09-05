@@ -14,10 +14,16 @@ class AssetsDetailViewModel {
     var asset: Investment?
     var detail: AssetDetail?
     
-    var formatter: NumberFormatter {
+    var currencyFormatter: NumberFormatter {
         let formatter = NumberFormatter()
         formatter.numberStyle = .currency
         formatter.locale = Locale(identifier: "pt_BR")
+        return formatter
+    }
+    
+    var dateFormatter: DateFormatter {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd/MM/yyyy"
         return formatter
     }
     
@@ -40,19 +46,44 @@ class AssetsDetailViewModel {
     }
     
     func getPricePurchase() -> String {
-        return formatter.string(from: NSNumber(value: asset?.purchasePrice ?? 0.0)) ?? "R$ 0,00"
+        return currencyFormatter.string(from: NSNumber(value: asset?.purchasePrice ?? 0.0)) ?? "R$ 0,00"
     }
     
     func getDatePurchase() -> String {
-        return "01/01/0001"
+        guard let purchaseDate = asset?.purchaseDate else {return "---"}
+        return dateFormatter.string(from: purchaseDate)
     }
     
-    func getTotalValue() -> String {
-        let quantityOfStocks = 10//asset.quantityOfStocks
-        let purchasePrice = 15.50//asset.purchasePrice
+    func getTotalValuePurchase() -> String {
+        let quantity = Double(10)//Double(asset.quantityOfStocks)
+        let pricePurchase = 30.50//asset.purchasePrice
         
-        let totalValue = Double(quantityOfStocks) * purchasePrice
+        let totalValue = quantity * pricePurchase
+        return currencyFormatter.string(from: NSNumber(value: totalValue)) ?? "R$ 0,00"
+    }
+    
+    func getTotalValueToday() -> String {
+        let quantity = Double(10)//Double(asset.quantityOfStocks)
+        let priceToday = detail?.getPriceNumber ?? 0.0
         
-        return formatter.string(from: NSNumber(value: totalValue)) ?? "R$ 0,00"
+        let totalValue = quantity * priceToday
+        return currencyFormatter.string(from: NSNumber(value: totalValue)) ?? "R$ 0,00"
+    }
+    
+    func getRentabilityValue() -> Double {
+        let quantity = Double(10)//Double(asset.quantityOfStocks)
+        let pricePurchase = 10.0//asset.purchasePrice
+        let priceToday = 9.0//detail?.getPriceNumber ?? 0.0
+        
+        let totalPurchase = quantity * pricePurchase
+        let totalToday = quantity * priceToday
+        
+        let rentability = ((totalToday * 100) / totalPurchase) - 100
+        return rentability
+    }
+    
+    func getRentability() -> String {
+        let rentability = getRentabilityValue()
+        return "\(Int(rentability))%"
     }
 }

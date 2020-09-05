@@ -85,6 +85,9 @@ final class AssetsDetailViewController: BaseViewController {
         labelQuantity.text = viewModel.asset?.quantityOfStocks.description
         labelPricePurchase.text = viewModel.getPricePurchase()
         labelDatePurchase.text = viewModel.getDatePurchase()
-        labelTotalValue.text = viewModel.getTotalValue()
+        labelTotalValue.text = viewModel.getTotalValuePurchase()
+        labelTodayQuote.text = viewModel.dateFormatter.string(from: Date())
+        labelTotalToday.text = viewModel.getTotalValueToday()
+        labelRentabilityPercent.text = viewModel.getRentability()
     }
 }

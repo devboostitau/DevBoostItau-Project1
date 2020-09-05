@@ -54,7 +54,6 @@
 		BD96DC7E2503B93100D569DA /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		BD96DC802503B93F00D569DA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BD96DC842503B9C400D569DA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		BDB1F2922503D3E50070079B /* AssetsDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsDetailViewController.swift; sourceTree = "<group>"; };
 		BDB1F2942503D4040070079B /* AssetsDetailViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AssetsDetailViewController.storyboard; sourceTree = "<group>"; };
 		BDB1F29A2503D4B70070079B /* LoadingCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingCustom.swift; sourceTree = "<group>"; };
@@ -64,7 +63,6 @@
 		BDB1F2A72503ECAE0070079B /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		BDB1F2AA2503F0390070079B /* AssetsDetailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsDetailRepository.swift; sourceTree = "<group>"; };
 		BDB1F2AD2503F1C20070079B /* AssetDetailService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetDetailService.swift; sourceTree = "<group>"; };
-		BDB1F2AF2503FA430070079B /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		BDB1F2B225040AB30070079B /* UIImageView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extensions.swift"; sourceTree = "<group>"; };
 		BDB1F2B425040AB30070079B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		BDB1F2B825040AD60070079B /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
@@ -95,13 +93,6 @@
 				4C2466142503CA37004E1323 /* AddOrEditStockViewController.xib */,
 			);
 			path = AddOrEditStock;
-			sourceTree = "<group>";
-		};
-		4C2466172503DA0C004E1323 /* Enum */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Enum;
 			sourceTree = "<group>";
 		};
 		BD96DC542503B6B700D569DA = {
@@ -194,15 +185,6 @@
 			path = Commoms;
 			sourceTree = "<group>";
 		};
-		BDB1F28E2503C3D40070079B /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */,
-				BDB1F2AF2503FA430070079B /* UIImageView+Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		BDB1F2912503D3810070079B /* AssetsDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -236,8 +218,6 @@
 		BDB1F2A42503E96B0070079B /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				4C2466172503DA0C004E1323 /* Enum */,
-				BDB1F28E2503C3D40070079B /* Extensions */,
 				BDB1F2A52503E9780070079B /* AssetDetail.swift */,
 			);
 			path = Model;
