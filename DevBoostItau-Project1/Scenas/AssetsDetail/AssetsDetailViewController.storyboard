@@ -262,12 +262,12 @@
                         <outlet property="imgIconClose" destination="1fP-mW-Cm0" id="k3Z-Fz-mal"/>
                         <outlet property="labelAssetName" destination="PsA-xC-dWh" id="4mx-P5-35U"/>
                         <outlet property="labelDatePurchase" destination="d0J-0N-FGX" id="7Vm-bt-mN3"/>
+                        <outlet property="labelDateToday" destination="qn6-d0-PPt" id="ior-45-2Ba"/>
                         <outlet property="labelPricePurchase" destination="ogB-jR-cjJ" id="3gY-Dg-c7g"/>
                         <outlet property="labelQuantity" destination="nYq-Rf-Do3" id="hYx-wa-z0n"/>
                         <outlet property="labelRentabilityPercent" destination="Y4O-uL-vdP" id="JWE-wB-3ld"/>
-                        <outlet property="labelTodayQuote" destination="qn6-d0-PPt" id="YTk-Sl-ZbY"/>
-                        <outlet property="labelTotalToday" destination="MeY-63-lWM" id="a8R-D1-Xiw"/>
                         <outlet property="labelTotalValue" destination="yvB-pS-fae" id="kUW-bk-fvj"/>
+                        <outlet property="labelTotalValueToday" destination="MeY-63-lWM" id="wHk-GA-lhj"/>
                         <outlet property="viewButtonEdit" destination="bWh-4r-eHN" id="LkV-SE-jdF"/>
                     </connections>
                 </viewController>
