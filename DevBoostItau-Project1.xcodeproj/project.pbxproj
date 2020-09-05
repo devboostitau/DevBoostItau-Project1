@@ -17,6 +17,10 @@
 		BD96DC812503B93F00D569DA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC802503B93F00D569DA /* HomeViewModel.swift */; };
 		BD96DC852503B9C400D569DA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC842503B9C400D569DA /* BaseViewController.swift */; };
 		BDB1F2902503C3E90070079B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */; };
+		F5DD49F52503CA1E00120661 /* Assets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DD49F42503CA1E00120661 /* Assets.storyboard */; };
+		F5DD49F72503CB3500120661 /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD49F62503CB3500120661 /* AssetTableViewCell.swift */; };
+		F5DD49FA2503CB5C00120661 /* AssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD49F92503CB5C00120661 /* AssetsViewController.swift */; };
+		F5DD49FC2503ECAD00120661 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD49FB2503ECAD00120661 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +36,10 @@
 		BD96DC802503B93F00D569DA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BD96DC842503B9C400D569DA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		F5DD49F42503CA1E00120661 /* Assets.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Assets.storyboard; sourceTree = "<group>"; };
+		F5DD49F62503CB3500120661 /* AssetTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
+		F5DD49F92503CB5C00120661 /* AssetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetsViewController.swift; sourceTree = "<group>"; };
+		F5DD49FB2503ECAD00120661 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +83,7 @@
 		BD96DC772503B6C600D569DA /* Scenas */ = {
 			isa = PBXGroup;
 			children = (
+				F5DD49F32503CA0200120661 /* Assets */,
 				BD96DC782503B6E700D569DA /* Base */,
 				BD96DC792503B6EE00D569DA /* Home */,
 			);
@@ -147,8 +156,27 @@
 			isa = PBXGroup;
 			children = (
 				BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */,
+				F5DD49FB2503ECAD00120661 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F5DD49F32503CA0200120661 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F5DD49F82503CB3B00120661 /* View */,
+				F5DD49F42503CA1E00120661 /* Assets.storyboard */,
+				F5DD49F92503CB5C00120661 /* AssetsViewController.swift */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F5DD49F82503CB3B00120661 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5DD49F62503CB3500120661 /* AssetTableViewCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +239,7 @@
 			files = (
 				BD96DC7F2503B93100D569DA /* HomeViewController.storyboard in Resources */,
 				BD96DC702503B6B800D569DA /* LaunchScreen.storyboard in Resources */,
+				F5DD49F52503CA1E00120661 /* Assets.storyboard in Resources */,
 				BD96DC6D2503B6B800D569DA /* Assets.xcassets in Resources */,
 				BD96DC682503B6B700D569DA /* Main.storyboard in Resources */,
 			);
@@ -223,9 +252,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F5DD49F72503CB3500120661 /* AssetTableViewCell.swift in Sources */,
 				BD96DC852503B9C400D569DA /* BaseViewController.swift in Sources */,
 				BDB1F2902503C3E90070079B /* UIColor+Extensions.swift in Sources */,
+				F5DD49FC2503ECAD00120661 /* UIView+Extensions.swift in Sources */,
 				BD96DC612503B6B700D569DA /* AppDelegate.swift in Sources */,
+				F5DD49FA2503CB5C00120661 /* AssetsViewController.swift in Sources */,
 				BD96DC6B2503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld in Sources */,
 				BD96DC7D2503B92800D569DA /* HomeViewController.swift in Sources */,
 				BD96DC812503B93F00D569DA /* HomeViewModel.swift in Sources */,
