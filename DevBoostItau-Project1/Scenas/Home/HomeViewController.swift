@@ -45,15 +45,11 @@ final class HomeViewController: BaseViewController {
         let signupCard = CardMenu(title: "cadastrar", subtitle: "cartão")
         let helpCard = CardMenu(title: "pedir ajuda", subtitle: "fale com um assistente")
         menuCards = [investCard, signupCard, helpCard]
-        
-        menuCollectionView.reloadData()
     }
     
     func setupView() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapFundsSegue))
         fundsContainerView.addGestureRecognizer(tapGesture)
-        
-        menuCollectionView.register(MenuCardCell.self, forCellWithReuseIdentifier: MenuCardCell.identifier)
     }
     
     func setupDelegates() {
@@ -98,4 +94,7 @@ extension HomeViewController: UICollectionViewDataSource {
 
 extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
+//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+//        return menuCollectionView.bounds.size
+//    }
 }
