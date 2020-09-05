@@ -20,6 +20,10 @@
 		F1F116762503E282007466DE /* CardMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F116752503E282007466DE /* CardMenu.swift */; };
 		F1F1167A2503E938007466DE /* InvestmentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F116792503E938007466DE /* InvestmentsManager.swift */; };
 		F1F1167D2503EB5B007466DE /* MenuCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1167C2503EB5B007466DE /* MenuCardCell.swift */; };
+		F5DD4A022503F34800120661 /* AssetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD49FE2503F34800120661 /* AssetsViewController.swift */; };
+		F5DD4A032503F34800120661 /* Assets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DD49FF2503F34800120661 /* Assets.storyboard */; };
+		F5DD4A042503F34800120661 /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD4A012503F34800120661 /* AssetTableViewCell.swift */; };
+		F5DD4A062503F36500120661 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD4A052503F36400120661 /* UIView+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		F1F116752503E282007466DE /* CardMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenu.swift; sourceTree = "<group>"; };
 		F1F116792503E938007466DE /* InvestmentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsManager.swift; sourceTree = "<group>"; };
 		F1F1167C2503EB5B007466DE /* MenuCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCardCell.swift; sourceTree = "<group>"; };
+		F5DD49FE2503F34800120661 /* AssetsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetsViewController.swift; sourceTree = "<group>"; };
+		F5DD49FF2503F34800120661 /* Assets.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Assets.storyboard; sourceTree = "<group>"; };
+		F5DD4A012503F34800120661 /* AssetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
+		F5DD4A052503F36400120661 /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +90,7 @@
 		BD96DC772503B6C600D569DA /* Scenas */ = {
 			isa = PBXGroup;
 			children = (
+				F5DD49FD2503F34800120661 /* Assets */,
 				BD96DC782503B6E700D569DA /* Base */,
 				BD96DC792503B6EE00D569DA /* Home */,
 			);
@@ -139,6 +148,7 @@
 		BDB1F28E2503C3D40070079B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F5DD4A052503F36400120661 /* UIView+Extensions.swift */,
 				BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
@@ -172,6 +182,24 @@
 			isa = PBXGroup;
 			children = (
 				F1F1167C2503EB5B007466DE /* MenuCardCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F5DD49FD2503F34800120661 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				F5DD49FE2503F34800120661 /* AssetsViewController.swift */,
+				F5DD49FF2503F34800120661 /* Assets.storyboard */,
+				F5DD4A002503F34800120661 /* View */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		F5DD4A002503F34800120661 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F5DD4A012503F34800120661 /* AssetTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,6 +264,7 @@
 			files = (
 				BD96DC7F2503B93100D569DA /* HomeViewController.storyboard in Resources */,
 				BD96DC702503B6B800D569DA /* LaunchScreen.storyboard in Resources */,
+				F5DD4A032503F34800120661 /* Assets.storyboard in Resources */,
 				BD96DC6D2503B6B800D569DA /* Assets.xcassets in Resources */,
 				BD96DC682503B6B700D569DA /* Main.storyboard in Resources */,
 			);
@@ -251,10 +280,13 @@
 				F1F116762503E282007466DE /* CardMenu.swift in Sources */,
 				F1F1167D2503EB5B007466DE /* MenuCardCell.swift in Sources */,
 				BD96DC852503B9C400D569DA /* BaseViewController.swift in Sources */,
+				F5DD4A022503F34800120661 /* AssetsViewController.swift in Sources */,
 				BDB1F2902503C3E90070079B /* UIColor+Extensions.swift in Sources */,
 				BD96DC612503B6B700D569DA /* AppDelegate.swift in Sources */,
+				F5DD4A062503F36500120661 /* UIView+Extensions.swift in Sources */,
 				BD96DC6B2503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld in Sources */,
 				BD96DC7D2503B92800D569DA /* HomeViewController.swift in Sources */,
+				F5DD4A042503F34800120661 /* AssetTableViewCell.swift in Sources */,
 				F1F1167A2503E938007466DE /* InvestmentsManager.swift in Sources */,
 				BD96DC812503B93F00D569DA /* HomeViewModel.swift in Sources */,
 			);
