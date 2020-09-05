@@ -17,6 +17,9 @@
 		BD96DC812503B93F00D569DA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC802503B93F00D569DA /* HomeViewModel.swift */; };
 		BD96DC852503B9C400D569DA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC842503B9C400D569DA /* BaseViewController.swift */; };
 		BDB1F2902503C3E90070079B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */; };
+		F1F116762503E282007466DE /* CardMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F116752503E282007466DE /* CardMenu.swift */; };
+		F1F1167A2503E938007466DE /* InvestmentsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F116792503E938007466DE /* InvestmentsManager.swift */; };
+		F1F1167D2503EB5B007466DE /* MenuCardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1F1167C2503EB5B007466DE /* MenuCardCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		BD96DC802503B93F00D569DA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BD96DC842503B9C400D569DA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
+		F1F116752503E282007466DE /* CardMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMenu.swift; sourceTree = "<group>"; };
+		F1F116792503E938007466DE /* InvestmentsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InvestmentsManager.swift; sourceTree = "<group>"; };
+		F1F1167C2503EB5B007466DE /* MenuCardCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +70,7 @@
 		BD96DC5F2503B6B700D569DA /* DevBoostItau-Project1 */ = {
 			isa = PBXGroup;
 			children = (
+				F1F116772503E91E007466DE /* Shared */,
 				BDB1F28A2503BDBF0070079B /* Commoms */,
 				BD96DC772503B6C600D569DA /* Scenas */,
 				BD96DC7A2503B6FA00D569DA /* Sources */,
@@ -92,8 +99,8 @@
 		BD96DC792503B6EE00D569DA /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				BDB1F28B2503C0FA0070079B /* Service */,
-				BD96DC822503B94800D569DA /* View */,
+				F1F1167B2503EB46007466DE /* View */,
+				F1F116742503E271007466DE /* Model */,
 				BD96DC802503B93F00D569DA /* HomeViewModel.swift */,
 				BD96DC7C2503B92800D569DA /* HomeViewController.swift */,
 				BD96DC7E2503B93100D569DA /* HomeViewController.storyboard */,
@@ -121,13 +128,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		BD96DC822503B94800D569DA /* View */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = View;
-			sourceTree = "<group>";
-		};
 		BDB1F28A2503BDBF0070079B /* Commoms */ = {
 			isa = PBXGroup;
 			children = (
@@ -136,19 +136,44 @@
 			path = Commoms;
 			sourceTree = "<group>";
 		};
-		BDB1F28B2503C0FA0070079B /* Service */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Service;
-			sourceTree = "<group>";
-		};
 		BDB1F28E2503C3D40070079B /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
 				BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F1F116742503E271007466DE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F1F116752503E282007466DE /* CardMenu.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F1F116772503E91E007466DE /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				F1F116782503E924007466DE /* Managers */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		F1F116782503E924007466DE /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				F1F116792503E938007466DE /* InvestmentsManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		F1F1167B2503EB46007466DE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F1F1167C2503EB5B007466DE /* MenuCardCell.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,11 +248,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1F116762503E282007466DE /* CardMenu.swift in Sources */,
+				F1F1167D2503EB5B007466DE /* MenuCardCell.swift in Sources */,
 				BD96DC852503B9C400D569DA /* BaseViewController.swift in Sources */,
 				BDB1F2902503C3E90070079B /* UIColor+Extensions.swift in Sources */,
 				BD96DC612503B6B700D569DA /* AppDelegate.swift in Sources */,
 				BD96DC6B2503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld in Sources */,
 				BD96DC7D2503B92800D569DA /* HomeViewController.swift in Sources */,
+				F1F1167A2503E938007466DE /* InvestmentsManager.swift in Sources */,
 				BD96DC812503B93F00D569DA /* HomeViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
