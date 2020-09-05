@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  DevBoostItau-Project1
 //
-//  Created by Helio Junior on 05/09/20.
+//  Created by Gabriel den Hartog on 05/09/20.
 //  Copyright © 2020 DevBoost-Itau. All rights reserved.
 //
 
