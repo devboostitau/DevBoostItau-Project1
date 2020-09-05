@@ -48,6 +48,7 @@ final class HomeViewController: BaseViewController {
     func setupView() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapFundsSegue))
         fundsContainerView.addGestureRecognizer(tapGesture)
+
     }
     
     func setupDelegates() {
