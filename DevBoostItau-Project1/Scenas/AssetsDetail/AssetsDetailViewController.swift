@@ -89,5 +89,14 @@ final class AssetsDetailViewController: BaseViewController {
         labelTodayQuote.text = viewModel.dateFormatter.string(from: Date())
         labelTotalToday.text = viewModel.getTotalValueToday()
         labelRentabilityPercent.text = viewModel.getRentability()
+        
+        var color = UIColor(red: 109/255, green: 173/255, blue: 51/255, alpha: 1)
+        if viewModel.getRentabilityValue() < 0 {
+            color = .red
+        }
+        
+        labelRentabilityPercent.textColor = color
+        labelTodayQuote.textColor = color
+        labelTotalToday.textColor = color
     }
 }

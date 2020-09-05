@@ -73,7 +73,7 @@ class AssetsDetailViewModel {
     func getRentabilityValue() -> Double {
         let quantity = Double(10)//Double(asset.quantityOfStocks)
         let pricePurchase = 10.0//asset.purchasePrice
-        let priceToday = 9.0//detail?.getPriceNumber ?? 0.0
+        let priceToday = 12.0//detail?.getPriceNumber ?? 0.0
         
         let totalPurchase = quantity * pricePurchase
         let totalToday = quantity * priceToday
