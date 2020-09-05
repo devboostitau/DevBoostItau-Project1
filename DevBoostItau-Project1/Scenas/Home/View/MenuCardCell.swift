@@ -12,10 +12,20 @@ class MenuCardCell: UICollectionViewCell {
     
     static let identifier = "MenuCardCell"
     
+    // MARK: - Outlets
+    @IBOutlet weak var gradientBackground: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
     
+    // MARK: - Overrides
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        gradientBackground.layer.cornerRadius = 8
+    }
+    
+    // MARK: - Methods
     func setupView(cardMenu: CardMenu) {
-        
+        titleLabel.text = cardMenu.title
+        subtitleLabel.text = cardMenu.subtitle
     }
 }
