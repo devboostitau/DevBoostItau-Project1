@@ -7,12 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class AssetsViewController: BaseViewController {
 
     // MARK: Properties
     private var balanceHidded = false
     var investments: [Investment] = []
+    lazy var investmentManager: InvestmentsManager = {[weak self] in
+        let investmentManager = InvestmentsManager(context: context)
+        investmentManager.delegate = self
+        return investmentManager
+    }()
     
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -28,6 +34,7 @@ class AssetsViewController: BaseViewController {
         
         setupView()
         setupMockData() //TODO: remove me
+        loadInvestments()
     }
 
     // MARK: Actions
@@ -49,7 +56,22 @@ class AssetsViewController: BaseViewController {
     }
     
     func setupMockData() {
+        let investment1 = Investment(context: context)
+        investment1.brokerCode = "inv1"
+        investment1.brokerName = "Clear Corretora"
+        investment1.quantityOfStocks = 100
+        investment1.purchaseDate = Date()
+        investment1.purchasePrice = 5.56
         
+        do {
+            try context.save()
+        } catch {
+            print("Deu ruim")
+        }
+    }
+    
+    func loadInvestments() {
+        investmentManager.performFetch()
     }
 }
 
@@ -88,5 +110,27 @@ extension AssetsViewController: UITableViewDelegate, UITableViewDataSource {
         
         let viewController = AssetsDetailBuilder().builder(code: "MGLU3")
         present(viewController, animated: true, completion: nil)
+    }
+}
+
+extension AssetsViewController: NSFetchedResultsControllerDelegate {
+
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        switch type {
+        case .delete:
+            print("Código para excluir o invesment da tabela")
+        case .move:
+            print("Código para atualizar a posição o invesment da tabela")
+        case .update:
+            print("Código para atualizar o invesment da tabela")
+        case .insert:
+            print("Código para inserir o invesment da tabela")
+        @unknown default:
+            print("Cenário desconhecido")
+        }
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.reloadData()
     }
 }
