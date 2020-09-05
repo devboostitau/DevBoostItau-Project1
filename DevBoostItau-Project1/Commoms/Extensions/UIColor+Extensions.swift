@@ -9,5 +9,6 @@
 import UIKit
 
 extension UIColor {
-    
+    static let itiPink = UIColor(red: 254 / 255.0, green: 85 / 255.0, blue: 143.0 / 255.0, alpha: 1.0)
+    static let itiOrange = UIColor(red: 237 / 255.0, green: 109 / 255.0, blue: 11 / 255.0, alpha: 1.0)
 }
