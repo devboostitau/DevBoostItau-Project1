@@ -7,12 +7,15 @@
 //
 
 import UIKit
+import CoreData
 
 class BaseViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    var context: NSManagedObjectContext {
+        guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else {
+            return NSManagedObjectContext(concurrencyType: .mainQueueConcurrencyType)
+        }
+        return appDelegate.persistentContainer.viewContext
         
     }
-    
 }

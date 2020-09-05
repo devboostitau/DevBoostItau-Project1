@@ -29,9 +29,6 @@ final class HomeViewController: BaseViewController {
         setupDelegates()
     }
     
-    // MARK: Actions
-
-    
     // MARK: Mathods
     func setupNavigationBar(){
         self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
@@ -53,22 +50,13 @@ final class HomeViewController: BaseViewController {
     }
     
     func setupDelegates() {
-        menuCollectionView.delegate = self
         menuCollectionView.dataSource = self
     }
     
-    // TODO: Adicionar nome correto da viewcontroller da 2da tela
+    // MARK: Actions
     @objc func didTapFundsSegue() {
-        print("didTapFundsSegue tapped")
         performSegue(withIdentifier: "AssetsSegue", sender: nil)
-//        let viewController = UIStoryboard(name: "?", bundle: nil)
-//            .instantiateViewController(withIdentifier: "?")
-//        present(viewController, animated: true, completion: nil)
     }
-}
-
-extension HomeViewController: UICollectionViewDelegate {
-    
 }
 
 extension HomeViewController: UICollectionViewDataSource {
@@ -89,12 +77,4 @@ extension HomeViewController: UICollectionViewDataSource {
         
         return cell
     }
-    
-}
-
-extension HomeViewController: UICollectionViewDelegateFlowLayout {
-    
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return menuCollectionView.bounds.size
-//    }
 }

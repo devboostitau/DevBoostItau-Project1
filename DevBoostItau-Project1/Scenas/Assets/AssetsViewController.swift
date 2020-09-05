@@ -8,10 +8,11 @@
 
 import UIKit
 
-class AssetsViewController: UIViewController {
+class AssetsViewController: BaseViewController {
 
     // MARK: Properties
     private var balanceHidded = false
+    var investments: [Investment] = []
     
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -26,6 +27,7 @@ class AssetsViewController: UIViewController {
         tableView.dataSource = self
         
         setupView()
+        setupMockData() //TODO: remove me
     }
 
     // MARK: Actions
@@ -45,14 +47,16 @@ class AssetsViewController: UIViewController {
         tableView.clipsToBounds = true
         tableView.layer.cornerRadius = 8
     }
-
     
-
+    func setupMockData() {
+        
+    }
 }
 
-extension AssetsViewController: UITableViewDelegate, UITableViewDataSource{
+extension AssetsViewController: UITableViewDelegate, UITableViewDataSource {
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return investments.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
