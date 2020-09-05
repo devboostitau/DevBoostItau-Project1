@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2466122503CA23004E1323 /* AddOrEditStockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2466112503CA23004E1323 /* AddOrEditStockViewModel.swift */; };
+		4C2466152503CA37004E1323 /* AddOrEditStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2466132503CA37004E1323 /* AddOrEditStockViewController.swift */; };
+		4C2466162503CA37004E1323 /* AddOrEditStockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2466142503CA37004E1323 /* AddOrEditStockViewController.xib */; };
 		BD96DC612503B6B700D569DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC602503B6B700D569DA /* AppDelegate.swift */; };
 		BD96DC682503B6B700D569DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD96DC662503B6B700D569DA /* Main.storyboard */; };
 		BD96DC6B2503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC692503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C2466112503CA23004E1323 /* AddOrEditStockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEditStockViewModel.swift; sourceTree = "<group>"; };
+		4C2466132503CA37004E1323 /* AddOrEditStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEditStockViewController.swift; sourceTree = "<group>"; };
+		4C2466142503CA37004E1323 /* AddOrEditStockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOrEditStockViewController.xib; sourceTree = "<group>"; };
 		BD96DC5D2503B6B700D569DA /* DevBoostItau-Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DevBoostItau-Project1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD96DC602503B6B700D569DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD96DC672503B6B700D569DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -45,6 +51,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C2466102503C9F7004E1323 /* AddOrEditStock */ = {
+			isa = PBXGroup;
+			children = (
+				4C2466112503CA23004E1323 /* AddOrEditStockViewModel.swift */,
+				4C2466132503CA37004E1323 /* AddOrEditStockViewController.swift */,
+				4C2466142503CA37004E1323 /* AddOrEditStockViewController.xib */,
+			);
+			path = AddOrEditStock;
+			sourceTree = "<group>";
+		};
+		4C2466172503DA0C004E1323 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		BD96DC542503B6B700D569DA = {
 			isa = PBXGroup;
 			children = (
@@ -77,6 +100,7 @@
 			children = (
 				BD96DC782503B6E700D569DA /* Base */,
 				BD96DC792503B6EE00D569DA /* Home */,
+				4C2466102503C9F7004E1323 /* AddOrEditStock */,
 			);
 			path = Scenas;
 			sourceTree = "<group>";
@@ -131,6 +155,7 @@
 		BDB1F28A2503BDBF0070079B /* Commoms */ = {
 			isa = PBXGroup;
 			children = (
+				4C2466172503DA0C004E1323 /* Enum */,
 				BDB1F28E2503C3D40070079B /* Extensions */,
 			);
 			path = Commoms;
@@ -212,6 +237,7 @@
 				BD96DC7F2503B93100D569DA /* HomeViewController.storyboard in Resources */,
 				BD96DC702503B6B800D569DA /* LaunchScreen.storyboard in Resources */,
 				BD96DC6D2503B6B800D569DA /* Assets.xcassets in Resources */,
+				4C2466162503CA37004E1323 /* AddOrEditStockViewController.xib in Resources */,
 				BD96DC682503B6B700D569DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -223,8 +249,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C2466152503CA37004E1323 /* AddOrEditStockViewController.swift in Sources */,
 				BD96DC852503B9C400D569DA /* BaseViewController.swift in Sources */,
 				BDB1F2902503C3E90070079B /* UIColor+Extensions.swift in Sources */,
+				4C2466122503CA23004E1323 /* AddOrEditStockViewModel.swift in Sources */,
 				BD96DC612503B6B700D569DA /* AppDelegate.swift in Sources */,
 				BD96DC6B2503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld in Sources */,
 				BD96DC7D2503B92800D569DA /* HomeViewController.swift in Sources */,
