@@ -16,16 +16,22 @@ class MenuCardCell: UICollectionViewCell {
     @IBOutlet weak var gradientBackground: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var backImage: UIImageView!
     
     // MARK: - Overrides
     override func awakeFromNib() {
         super.awakeFromNib()
-        gradientBackground.layer.cornerRadius = 8
+        self.contentView.applyGradient(style: .vertical, colors: [UIColor.itiOrange, UIColor.itiPink])
+        self.contentView.clipsToBounds = true
+        self.contentView.layer.cornerRadius = 8
+        
+        self.gradientBackground.backgroundColor = .clear
     }
     
     // MARK: - Methods
-    func setupView(cardMenu: CardMenu) {
+    func setupView(cardMenu: CardMenu, backImage: UIImage?) {
         titleLabel.text = cardMenu.title
         subtitleLabel.text = cardMenu.subtitle
+        self.backImage.image = backImage
     }
 }

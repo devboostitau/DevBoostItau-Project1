@@ -83,27 +83,38 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCB-BC-EHu" userLabel="gradientBackground">
                                                     <rect key="frame" x="0.0" y="0.0" width="168" height="217"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.65000000000000002" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-1x-ju0">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTV-1x-ju0">
                                                             <rect key="frame" x="8" y="168" width="152" height="21"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" alpha="0.64999997615814209" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEe-Kl-vFo">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="subtitle" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEe-Kl-vFo">
                                                             <rect key="frame" x="8" y="193" width="152" height="16"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000000000002" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dollarsign.circle" translatesAutoresizingMaskIntoConstraints="NO" id="Num-kT-WTs">
+                                                            <rect key="frame" x="51" y="-34.5" width="160" height="144"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="148" id="ISL-wN-ZWV"/>
+                                                                <constraint firstAttribute="width" constant="160" id="hUx-z2-xVC"/>
+                                                            </constraints>
+                                                        </imageView>
                                                     </subviews>
                                                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
+                                                        <constraint firstItem="Num-kT-WTs" firstAttribute="top" secondItem="GCB-BC-EHu" secondAttribute="top" constant="-36.5" id="0Ai-p8-hZV"/>
                                                         <constraint firstAttribute="height" constant="190" id="50Y-wj-D2y"/>
                                                         <constraint firstItem="kEe-Kl-vFo" firstAttribute="top" secondItem="gTV-1x-ju0" secondAttribute="bottom" constant="4" id="7gg-A3-YcP"/>
                                                         <constraint firstAttribute="trailing" secondItem="kEe-Kl-vFo" secondAttribute="trailing" constant="8" id="KPo-mg-Fd5"/>
                                                         <constraint firstAttribute="width" constant="158" id="P4a-zU-PSR"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Num-kT-WTs" secondAttribute="trailing" constant="-43" id="PZH-pV-QuJ"/>
                                                         <constraint firstAttribute="bottom" secondItem="kEe-Kl-vFo" secondAttribute="bottom" constant="8" id="Tzt-aD-43b"/>
                                                         <constraint firstItem="kEe-Kl-vFo" firstAttribute="leading" secondItem="GCB-BC-EHu" secondAttribute="leading" constant="8" id="d8a-YA-TT7"/>
+                                                        <constraint firstItem="Num-kT-WTs" firstAttribute="leading" secondItem="GCB-BC-EHu" secondAttribute="leading" constant="51" id="sLN-ep-P3V"/>
                                                         <constraint firstAttribute="trailing" secondItem="gTV-1x-ju0" secondAttribute="trailing" constant="8" id="tZJ-MB-zON"/>
                                                         <constraint firstItem="gTV-1x-ju0" firstAttribute="leading" secondItem="kEe-Kl-vFo" secondAttribute="leading" id="ypZ-PN-1Sz"/>
                                                     </constraints>
@@ -119,6 +130,7 @@
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="168" height="217"/>
                                         <connections>
+                                            <outlet property="backImage" destination="Num-kT-WTs" id="p8f-RB-kxU"/>
                                             <outlet property="gradientBackground" destination="GCB-BC-EHu" id="aC2-HG-CYR"/>
                                             <outlet property="subtitleLabel" destination="kEe-Kl-vFo" id="lwl-zj-SXa"/>
                                             <outlet property="titleLabel" destination="gTV-1x-ju0" id="QiA-o9-Gr5"/>
@@ -274,6 +286,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="dollarsign.circle" width="128" height="121"/>
         <image name="emptyProfileImage" width="234" height="250"/>
         <image name="notVisibleEyeImage" width="95" height="86"/>
         <image name="qrcode" catalog="system" width="128" height="114"/>

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C2466122503CA23004E1323 /* AddOrEditStockViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2466112503CA23004E1323 /* AddOrEditStockViewModel.swift */; };
+		4C2466152503CA37004E1323 /* AddOrEditStockViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C2466132503CA37004E1323 /* AddOrEditStockViewController.swift */; };
+		4C2466162503CA37004E1323 /* AddOrEditStockViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C2466142503CA37004E1323 /* AddOrEditStockViewController.xib */; };
 		BD96DC612503B6B700D569DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC602503B6B700D569DA /* AppDelegate.swift */; };
 		BD96DC682503B6B700D569DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD96DC662503B6B700D569DA /* Main.storyboard */; };
 		BD96DC6B2503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC692503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld */; };
@@ -37,6 +40,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C2466112503CA23004E1323 /* AddOrEditStockViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEditStockViewModel.swift; sourceTree = "<group>"; };
+		4C2466132503CA37004E1323 /* AddOrEditStockViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddOrEditStockViewController.swift; sourceTree = "<group>"; };
+		4C2466142503CA37004E1323 /* AddOrEditStockViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddOrEditStockViewController.xib; sourceTree = "<group>"; };
 		BD96DC5D2503B6B700D569DA /* DevBoostItau-Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DevBoostItau-Project1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD96DC602503B6B700D569DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD96DC672503B6B700D569DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -79,6 +85,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4C2466102503C9F7004E1323 /* AddOrEditStock */ = {
+			isa = PBXGroup;
+			children = (
+				4C2466112503CA23004E1323 /* AddOrEditStockViewModel.swift */,
+				4C2466132503CA37004E1323 /* AddOrEditStockViewController.swift */,
+				4C2466142503CA37004E1323 /* AddOrEditStockViewController.xib */,
+			);
+			path = AddOrEditStock;
+			sourceTree = "<group>";
+		};
+		4C2466172503DA0C004E1323 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		BD96DC542503B6B700D569DA = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +137,7 @@
 				F5DD49FD2503F34800120661 /* Assets */,
 				BD96DC782503B6E700D569DA /* Base */,
 				BD96DC792503B6EE00D569DA /* Home */,
+				4C2466102503C9F7004E1323 /* AddOrEditStock */,
 			);
 			path = Scenas;
 			sourceTree = "<group>";
@@ -210,6 +234,9 @@
 		BDB1F2A42503E96B0070079B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+
+				4C2466172503DA0C004E1323 /* Enum */,
+				BDB1F28E2503C3D40070079B /* Extensions */,
 				BDB1F2A52503E9780070079B /* AssetDetail.swift */,
 			);
 			path = Model;
@@ -345,7 +372,9 @@
 				BD96DC702503B6B800D569DA /* LaunchScreen.storyboard in Resources */,
 				F5DD4A032503F34800120661 /* Assets.storyboard in Resources */,
 				BD96DC6D2503B6B800D569DA /* Assets.xcassets in Resources */,
+				4C2466162503CA37004E1323 /* AddOrEditStockViewController.xib in Resources */,
 				BDB1F2952503D4040070079B /* AssetsDetailViewController.storyboard in Resources */,
+
 				BD96DC682503B6B700D569DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,6 +386,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+				4C2466152503CA37004E1323 /* AddOrEditStockViewController.swift in Sources */,
 				BDB1F2A82503ECAE0070079B /* Network.swift in Sources */,
 				F1F116762503E282007466DE /* CardMenu.swift in Sources */,
 				F1F1167D2503EB5B007466DE /* MenuCardCell.swift in Sources */,
@@ -364,6 +395,7 @@
 				F5DD4A022503F34800120661 /* AssetsViewController.swift in Sources */,
 				BDB1F2B02503FA430070079B /* UIImageView+Extensions.swift in Sources */,
 				BDB1F2902503C3E90070079B /* UIColor+Extensions.swift in Sources */,
+				4C2466122503CA23004E1323 /* AddOrEditStockViewModel.swift in Sources */,
 				BD96DC612503B6B700D569DA /* AppDelegate.swift in Sources */,
 				BDB1F2A32503E0660070079B /* AssetsDetailViewModel.swift in Sources */,
 				BDB1F2932503D3E50070079B /* AssetsDetailViewController.swift in Sources */,
