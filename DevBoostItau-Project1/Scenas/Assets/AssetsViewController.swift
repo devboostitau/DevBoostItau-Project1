@@ -64,4 +64,17 @@ extension AssetsViewController: UITableViewDelegate, UITableViewDataSource{
 
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let editAction = UITableViewRowAction(style: .default, title: "editar", handler: { (action, indexPath) in
+            
+        })
+        editAction.backgroundColor = UIColor.lightGray
+        
+        let deleteAction = UITableViewRowAction(style: .default, title: "excluir", handler: { (action, indexPath) in
+            
+        })
+        
+        return [editAction, deleteAction]
+    }
 }
