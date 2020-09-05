@@ -11,6 +11,7 @@ import UIKit
 class AssetsViewController: UIViewController {
 
     // MARK: Properties
+    private var balanceHidded = false
     
     // MARK: Outlets
     @IBOutlet weak var tableView: UITableView!
@@ -29,6 +30,8 @@ class AssetsViewController: UIViewController {
 
     // MARK: Actions
     @IBAction func showBalance(_ sender: Any) {
+        balanceHidded.toggle()
+        balanceLabel.text = balanceHidded ? "--" : "R$ 3150,00"
     }
     
     // MARK: Mathods

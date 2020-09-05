@@ -23,6 +23,7 @@ final class HomeViewController: BaseViewController {
     // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavigationBar()
         setupMenuCards()
         setupView()
         setupDelegates()
@@ -32,6 +33,12 @@ final class HomeViewController: BaseViewController {
 
     
     // MARK: Mathods
+    func setupNavigationBar(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+    }
     
     func setupMenuCards() {
         let investCard = CardMenu(title: "investir", subtitle: "seu dinheiro")
@@ -57,6 +64,7 @@ final class HomeViewController: BaseViewController {
     // TODO: Adicionar nome correto da viewcontroller da 2da tela
     @objc func didTapFundsSegue() {
         print("didTapFundsSegue tapped")
+        performSegue(withIdentifier: "AssetsSegue", sender: nil)
 //        let viewController = UIStoryboard(name: "?", bundle: nil)
 //            .instantiateViewController(withIdentifier: "?")
 //        present(viewController, animated: true, completion: nil)

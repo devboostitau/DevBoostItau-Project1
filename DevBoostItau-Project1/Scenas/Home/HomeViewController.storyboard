@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.2" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yAJ-iN-sv0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yAJ-iN-sv0">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -198,8 +198,9 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="iti" id="agE-Ij-RMv">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="qrCodeIcon" id="hvi-0H-Geu"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="settingsIcon" id="vtR-hT-Eek"/>
+                        <barButtonItem key="backBarButtonItem" title=" " id="0u0-Pa-oew"/>
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="qrcode" catalog="system" id="RL3-K4-Q3D"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="xmark.seal" catalog="system" id="Ufi-du-gFV"/>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
@@ -207,6 +208,7 @@
                         <outlet property="menuCollectionView" destination="HXe-Vj-q8e" id="T1x-cD-Zm9"/>
                         <outlet property="totalInvestmentsLabel" destination="SBx-xa-JzC" id="1L1-IR-OsW"/>
                         <outlet property="userNameLabel" destination="C8s-YQ-8Jt" id="p0d-WQ-1fz"/>
+                        <segue destination="vCj-6R-OcF" kind="show" identifier="AssetsSegue" id="214-JB-Fye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dpl-1S-sF5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -222,9 +224,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ezd-wQ-IVo">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="system" pointSize="30"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,13 +242,23 @@
             </objects>
             <point key="canvasLocation" x="-194" y="136"/>
         </scene>
+        <!--Assets-->
+        <scene sceneID="Ehm-qe-xUs">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Assets" id="vCj-6R-OcF" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="g9O-WD-om5"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1NN-YM-WY1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1328" y="80"/>
+        </scene>
     </scenes>
     <resources>
         <image name="emptyProfileImage" width="234" height="250"/>
         <image name="notVisibleEyeImage" width="95" height="86"/>
-        <image name="qrCodeIcon" width="267" height="265"/>
+        <image name="qrcode" catalog="system" width="128" height="114"/>
         <image name="rightArrowImage" width="42" height="59"/>
-        <image name="settingsIcon" width="78" height="85"/>
         <image name="upArrowCircleImage" width="104" height="97"/>
+        <image name="xmark.seal" catalog="system" width="128" height="122"/>
     </resources>
 </document>
