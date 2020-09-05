@@ -37,6 +37,7 @@ final class AddOrEditStockViewController: UIViewController {
             setupDataInViews()
         }
         setupViews()
+        addKeyboarController(for: [startDateTextField, stockTextField, quantityTextField, priceTextField])
     }
     // MARK: - Override
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

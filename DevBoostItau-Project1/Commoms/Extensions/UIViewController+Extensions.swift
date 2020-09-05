@@ -15,7 +15,6 @@ extension UIViewController{
             toolbar.sizeToFit()
 
             var items = [UIBarButtonItem]()
-//            if previousNextable {
               let previousButton = UIBarButtonItem(title: "previous", style: .plain, target: nil, action: nil)
               previousButton.width = 30
               if textField == textFields.first {
@@ -34,7 +33,6 @@ extension UIViewController{
                 nextButton.action = #selector(UITextField.becomeFirstResponder)
               }
               items.append(contentsOf: [previousButton, nextButton])
-//            }
 
             let spacer = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
             let doneButton = UIBarButtonItem(barButtonSystemItem: .done, target: view, action: #selector(UIView.endEditing))
