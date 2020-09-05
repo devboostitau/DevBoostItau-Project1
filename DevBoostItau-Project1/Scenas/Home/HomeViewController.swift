@@ -35,7 +35,7 @@ final class HomeViewController: BaseViewController {
     }
     
     @IBAction func handlerButton4(_ sender: Any) {
-        let viewController = AssetsDetailBuilder().builder()
+        let viewController = AssetsDetailBuilder().builder(code: "ITSA4")
         present(viewController, animated: true, completion: nil)
     }
     

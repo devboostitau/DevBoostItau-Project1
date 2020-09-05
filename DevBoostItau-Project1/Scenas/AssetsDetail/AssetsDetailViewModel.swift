@@ -10,6 +10,22 @@ import Foundation
 
 class AssetsDetailViewModel {
     
+    let repository: AssetDetailRepository!
     
+    init(_ repository: AssetDetailRepository = AssetDetailRepository()) {
+        self.repository = repository
+    }
+    
+    var onSuccess: ((AssetDetail) -> Void)?
+    var onFail: ((String) -> Void)?
+    
+    func getAssetsWith(code: String) {
+        
+        repository.getAsset(code: code, onSussecc: { [weak self] assetDetail in
+            self?.onSuccess?(assetDetail)
+        }) { [weak self] error in
+            self?.onFail?(error)
+        }
+    }
     
 }
