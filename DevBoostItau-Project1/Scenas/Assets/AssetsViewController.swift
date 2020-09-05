@@ -90,7 +90,8 @@ extension AssetsViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        // Configure the cell...
+        let investment = investments[indexPath.row]
+        cell.configure(with: investment)
 
         return cell
     }
@@ -109,10 +110,11 @@ extension AssetsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let asset = self.investments[indexPath.row]
+//        guard let _ = asset.brokerCode else {return}
         
-        // TODO: Pegar Asset clicado
-        
-        let viewController = AssetsDetailBuilder().builder(code: "MGLU3")
+//        let viewController = AssetsDetailBuilder().builder(asset: asset)
+        let viewController = AssetsDetailBuilder().builder(code: "ITSA4")
         present(viewController, animated: true, completion: nil)
     }
 }
