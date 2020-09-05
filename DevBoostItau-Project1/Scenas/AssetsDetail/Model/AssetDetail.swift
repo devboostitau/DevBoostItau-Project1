@@ -47,4 +47,8 @@ struct AssetDetail: AssetDetailResponse {
         formatter.locale = Locale(identifier: "pt_BR")
         return formatter.string(from: NSNumber(value: getResult()?.price ?? 0.0)) ?? "R$ 0,00"
     }
+    
+    var getPriceNumber: Double {
+        return getResult()?.price ?? 0.0
+    }
 }
