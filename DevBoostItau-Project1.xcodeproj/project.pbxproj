@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		09EEBEBC746B2B2E2BDCFEA7 /* Pods_DevBoostItau_Project1.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D9AEAC488669D2CD77C529A /* Pods_DevBoostItau_Project1.framework */; };
 		BD96DC612503B6B700D569DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC602503B6B700D569DA /* AppDelegate.swift */; };
 		BD96DC682503B6B700D569DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD96DC662503B6B700D569DA /* Main.storyboard */; };
 		BD96DC6B2503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC692503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld */; };
@@ -21,8 +20,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		67536C08180B9B5DBF07D723 /* Pods-DevBoostItau-Project1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevBoostItau-Project1.debug.xcconfig"; path = "Target Support Files/Pods-DevBoostItau-Project1/Pods-DevBoostItau-Project1.debug.xcconfig"; sourceTree = "<group>"; };
-		7D9AEAC488669D2CD77C529A /* Pods_DevBoostItau_Project1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DevBoostItau_Project1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD96DC5D2503B6B700D569DA /* DevBoostItau-Project1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DevBoostItau-Project1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD96DC602503B6B700D569DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD96DC672503B6B700D569DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -35,7 +32,6 @@
 		BD96DC802503B93F00D569DA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BD96DC842503B9C400D569DA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
-		E9290691AE47BB0510B01DF5 /* Pods-DevBoostItau-Project1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevBoostItau-Project1.release.xcconfig"; path = "Target Support Files/Pods-DevBoostItau-Project1/Pods-DevBoostItau-Project1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,37 +39,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				09EEBEBC746B2B2E2BDCFEA7 /* Pods_DevBoostItau_Project1.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		98B9AD498635D1C7ADABAD19 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				7D9AEAC488669D2CD77C529A /* Pods_DevBoostItau_Project1.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		99CD32DB9964A10724E9F9B5 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				67536C08180B9B5DBF07D723 /* Pods-DevBoostItau-Project1.debug.xcconfig */,
-				E9290691AE47BB0510B01DF5 /* Pods-DevBoostItau-Project1.release.xcconfig */,
-			);
-			path = Pods;
-			sourceTree = "<group>";
-		};
 		BD96DC542503B6B700D569DA = {
 			isa = PBXGroup;
 			children = (
 				BD96DC5F2503B6B700D569DA /* DevBoostItau-Project1 */,
 				BD96DC5E2503B6B700D569DA /* Products */,
-				99CD32DB9964A10724E9F9B5 /* Pods */,
-				98B9AD498635D1C7ADABAD19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -182,7 +158,6 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BD96DC742503B6B800D569DA /* Build configuration list for PBXNativeTarget "DevBoostItau-Project1" */;
 			buildPhases = (
-				7A4BF5DE407AE53643597D09 /* [CP] Check Pods Manifest.lock */,
 				BD96DC592503B6B700D569DA /* Sources */,
 				BD96DC5A2503B6B700D569DA /* Frameworks */,
 				BD96DC5B2503B6B700D569DA /* Resources */,
@@ -242,31 +217,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		7A4BF5DE407AE53643597D09 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-DevBoostItau-Project1-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BD96DC592503B6B700D569DA /* Sources */ = {
@@ -420,7 +370,6 @@
 		};
 		BD96DC752503B6B800D569DA /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 67536C08180B9B5DBF07D723 /* Pods-DevBoostItau-Project1.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -440,7 +389,6 @@
 		};
 		BD96DC762503B6B800D569DA /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = E9290691AE47BB0510B01DF5 /* Pods-DevBoostItau-Project1.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
