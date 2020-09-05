@@ -19,6 +19,8 @@ final class AddOrEditStockViewController: UIViewController {
     @IBOutlet weak var quantityLabel: UILabel!
     @IBOutlet weak var startDateLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
+
+    
     // MARK: - Properts
     private var datePicker: UIDatePicker?
     private let viewModel = AddOrEditStockViewModel()
@@ -66,6 +68,9 @@ final class AddOrEditStockViewController: UIViewController {
         } else {
             investButton.setTitle("Investir", for: .normal)
         }
+        investButton.applyGradient(style: .horizontal, colors: [UIColor.itiOrange, UIColor.itiPink])
+        investButton.clipsToBounds = true
+        investButton.layer.cornerRadius = 25
     }
     // MARK: - Taps
     @objc private func dateChanged(datePicker: UIDatePicker) {
@@ -76,6 +81,10 @@ final class AddOrEditStockViewController: UIViewController {
     @IBAction func didTapInvestButton(_ sender: Any) {
         verifyError()
     }
+    @IBAction func didTapCloseButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     // MARK: - Functions
     private func verifyError() {
         stockLabel.textColor = stockTextField.text?.isEmpty ?? false ? UIColor.red : UIColor.gray
