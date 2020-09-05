@@ -2,7 +2,7 @@
 //  HomeViewController.swift
 //  DevBoostItau-Project1
 //
-//  Created by Helio Junior on 05/09/20.
+//  Created by Gabriel den Hartog on 05/09/20.
 //  Copyright © 2020 DevBoost-Itau. All rights reserved.
 //
 
@@ -13,6 +13,7 @@ final class HomeViewController: BaseViewController {
     // MARK: Properties
     let viewModel = HomeViewModel()
     var menuCards: [CardMenu]?
+    var backImages = [UIImage(named: "money"), UIImage(named: "card"), UIImage(named: "question")]
     
     // MARK: Outlets
     @IBOutlet weak var userNameLabel: UILabel!
@@ -47,6 +48,7 @@ final class HomeViewController: BaseViewController {
     func setupView() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapFundsSegue))
         fundsContainerView.addGestureRecognizer(tapGesture)
+
     }
     
     func setupDelegates() {
@@ -72,7 +74,7 @@ extension HomeViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuCardCell.identifier, for: indexPath) as! MenuCardCell
         if let cards = menuCards {
             let cardMenu = cards[indexPath.row]
-            cell.setupView(cardMenu: cardMenu)
+            cell.setupView(cardMenu: cardMenu, backImage: backImages[indexPath.row])
         }
         
         return cell
