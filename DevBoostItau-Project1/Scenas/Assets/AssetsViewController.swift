@@ -33,8 +33,8 @@ class AssetsViewController: BaseViewController {
         tableView.dataSource = self
         
         setupView()
-        setupMockData() //TODO: remove me
         loadInvestments()
+        setupMockData() //TODO: remove me
     }
 
     // MARK: Actions
@@ -75,6 +75,15 @@ class AssetsViewController: BaseViewController {
     }
     
     func loadInvestments() {
+        let fetchRequest: NSFetchRequest<Investment> = Investment.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "purchaseDate", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+       do{
+           investments = try context.fetch(fetchRequest)
+           tableView.reloadData()
+       }catch{
+           print("error")
+       }
         investmentManager.performFetch()
     }
 }
@@ -122,17 +131,19 @@ extension AssetsViewController: UITableViewDelegate, UITableViewDataSource {
 extension AssetsViewController: NSFetchedResultsControllerDelegate {
 
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        switch type {
-        case .delete:
-            print("Código para excluir o invesment da tabela")
-        case .move:
-            print("Código para atualizar a posição o invesment da tabela")
-        case .update:
-            print("Código para atualizar o invesment da tabela")
-        case .insert:
-            print("Código para inserir o invesment da tabela")
-        @unknown default:
-            print("Cenário desconhecido")
+        if let investment = anObject as? Investment {
+            switch type {
+            case .delete:
+                print("Código para excluir o invesment da tabela")
+            case .move:
+                print("Código para atualizar a posição o invesment da tabela")
+            case .update:
+                print("Código para atualizar o invesment da tabela")
+            case .insert:
+                investments.append(investment)
+            @unknown default:
+                print("Cenário desconhecido")
+            }
         }
     }
     
