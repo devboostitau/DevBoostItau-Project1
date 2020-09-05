@@ -68,4 +68,25 @@ extension AssetsViewController: UITableViewDelegate, UITableViewDataSource {
 
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        let editAction = UITableViewRowAction(style: .default, title: "editar", handler: { (action, indexPath) in
+            
+        })
+        editAction.backgroundColor = UIColor.lightGray
+        
+        let deleteAction = UITableViewRowAction(style: .default, title: "excluir", handler: { (action, indexPath) in
+            
+        })
+        
+        return [editAction, deleteAction]
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // TODO: Pegar Asset clicado
+        
+        let viewController = AssetsDetailBuilder().builder(code: "MGLU3")
+        present(viewController, animated: true, completion: nil)
+    }
 }
