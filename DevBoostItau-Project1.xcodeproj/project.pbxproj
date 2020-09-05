@@ -38,6 +38,7 @@
 		F5DD4A032503F34800120661 /* Assets.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5DD49FF2503F34800120661 /* Assets.storyboard */; };
 		F5DD4A042503F34800120661 /* AssetTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD4A012503F34800120661 /* AssetTableViewCell.swift */; };
 		F5DD4A1125040CAF00120661 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD4A1025040CAE00120661 /* UIViewController+Extensions.swift */; };
+		F5DD4A132504129D00120661 /* Double+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5DD4A122504129D00120661 /* Double+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		F5DD49FF2503F34800120661 /* Assets.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Assets.storyboard; sourceTree = "<group>"; };
 		F5DD4A012503F34800120661 /* AssetTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssetTableViewCell.swift; sourceTree = "<group>"; };
 		F5DD4A1025040CAE00120661 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		F5DD4A122504129D00120661 /* Double+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 				BDB1F2B225040AB30070079B /* UIImageView+Extensions.swift */,
 				BDB1F2B425040AB30070079B /* UIColor+Extensions.swift */,
 				BDB1F2B825040AD60070079B /* UIView+Extensions.swift */,
+				F5DD4A122504129D00120661 /* Double+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -412,6 +415,7 @@
 				BDB1F2A62503E9780070079B /* AssetDetail.swift in Sources */,
 				F5DD4A1125040CAF00120661 /* UIViewController+Extensions.swift in Sources */,
 				BDB1F2AB2503F0390070079B /* AssetsDetailRepository.swift in Sources */,
+				F5DD4A132504129D00120661 /* Double+Extensions.swift in Sources */,
 				BD96DC6B2503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld in Sources */,
 				BD96DC7D2503B92800D569DA /* HomeViewController.swift in Sources */,
 				BDB1F2AE2503F1C20070079B /* AssetDetailService.swift in Sources */,

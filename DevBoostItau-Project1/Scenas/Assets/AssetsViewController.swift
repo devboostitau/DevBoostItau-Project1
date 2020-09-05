@@ -90,7 +90,8 @@ extension AssetsViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
 
-        // Configure the cell...
+        let investment = investments[indexPath.row]
+        cell.configure(with: investment)
 
         return cell
     }

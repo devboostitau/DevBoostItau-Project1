@@ -16,10 +16,13 @@ class AssetTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-    }
-
-    func configure(){
         
     }
+
+    func configure(with investment: Investment){
+        nameLabel.text = investment.brokerName
+        currentBalanceLabel.text = investment.purchasePrice.formatMoney()
+    }
 }
+
+
