@@ -33,12 +33,8 @@ class AssetsViewController: BaseViewController {
         tableView.dataSource = self
         
         setupView()
-        loadInvestments()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
         setupMockData() //TODO: remove me
+        loadInvestments()
     }
 
     // MARK: Actions
@@ -47,12 +43,11 @@ class AssetsViewController: BaseViewController {
         balanceLabel.text = balanceHidded ? "--" : "R$ 3150,00"
     }
     
-    @IBAction func newInvestmentButtonTapped(_ sender: Any) {
-        let addOrEditVC = AddOrEditStockViewController(nibName: "AddOrEditStockViewController", bundle: nil)
-        present(addOrEditVC, animated: true, completion: nil)
+    @IBAction func goToNewInvestment(_ sender: Any) {
+        navigationController?.present(AddOrEditStockViewController(), animated: true, completion: nil)
     }
     
-    // MARK: Methods
+    // MARK: Mathods
     func setupView(){
         self.view.applyGradient(style: .vertical, colors: [UIColor.itiOrange, UIColor.itiPink])
         newInvestmentButton.applyGradient(style: .horizontal, colors: [UIColor.itiOrange, UIColor.itiPink])
@@ -125,23 +120,18 @@ extension AssetsViewController: UITableViewDelegate, UITableViewDataSource {
 extension AssetsViewController: NSFetchedResultsControllerDelegate {
 
     func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
-        
-        if let investment = anObject as? Investment {
-            switch type {
-            case .delete:
-                print("Código para excluir o invesment da tabela")
-            case .move:
-                print("Código para atualizar a posição o invesment da tabela")
-            case .update:
-                print("Código para atualizar o invesment da tabela")
-            case .insert:
-                investments.append(investment)
-            @unknown default:
-                print("Cenário desconhecido")
-            }
+        switch type {
+        case .delete:
+            print("Código para excluir o invesment da tabela")
+        case .move:
+            print("Código para atualizar a posição o invesment da tabela")
+        case .update:
+            print("Código para atualizar o invesment da tabela")
+        case .insert:
+            print("Código para inserir o invesment da tabela")
+        @unknown default:
+            print("Cenário desconhecido")
         }
-        
-        
     }
     
     func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
