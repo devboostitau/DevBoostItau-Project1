@@ -33,7 +33,7 @@ class AssetsViewController: BaseViewController {
         tableView.dataSource = self
         
         setupView()
-        setupMockData() //TODO: remove me
+//        setupMockData() //TODO: remove me
         loadInvestments()
     }
 
@@ -75,6 +75,15 @@ class AssetsViewController: BaseViewController {
     }
     
     func loadInvestments() {
+        let fetchRequest: NSFetchRequest<Investment> = Investment.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "purchaseDate", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+       do{
+           investments = try context.fetch(fetchRequest)
+           tableView.reloadData()
+       }catch{
+           print("error")
+       }
         investmentManager.performFetch()
     }
 }
