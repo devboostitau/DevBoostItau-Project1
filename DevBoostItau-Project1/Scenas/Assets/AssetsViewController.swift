@@ -43,6 +43,10 @@ class AssetsViewController: BaseViewController {
         balanceLabel.text = balanceHidded ? "--" : "R$ 3150,00"
     }
     
+    @IBAction func goToNewInvestment(_ sender: Any) {
+        navigationController?.present(AddOrEditStockViewController(), animated: true, completion: nil)
+    }
+    
     // MARK: Mathods
     func setupView(){
         self.view.applyGradient(style: .vertical, colors: [UIColor.itiOrange, UIColor.itiPink])
