@@ -20,4 +20,8 @@ extension UIView {
          gradient.endPoint = style == .horizontal ? CGPoint(x: 1.0, y: 0.5) : CGPoint(x: 1, y: 1)
          self.layer.insertSublayer(gradient, at: 0)
     }
+
+    class func fromNib<T: UIView>() -> T {
+        return Bundle.main.loadNibNamed(String(describing: T.self), owner: nil, options: nil)![0] as! T
+    }
 }
