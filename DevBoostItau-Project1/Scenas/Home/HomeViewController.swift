@@ -32,7 +32,6 @@ final class HomeViewController: BaseViewController {
     }
     
     @IBAction func handlerButton3(_ sender: Any) {
-        self.navigationController?.present(AddOrEditStockViewController(), animated: true, completion: nil)
     }
     
     @IBAction func handlerButton4(_ sender: Any) {
