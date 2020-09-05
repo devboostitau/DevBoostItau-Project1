@@ -56,7 +56,7 @@ class AssetsViewController: BaseViewController {
 extension AssetsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return investments.count
+        return 1//investments.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -83,10 +83,11 @@ extension AssetsViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let asset = self.investments[indexPath.row]
+//        guard let _ = asset.brokerCode else {return}
         
-        // TODO: Pegar Asset clicado
-        
-        let viewController = AssetsDetailBuilder().builder(code: "MGLU3")
+//        let viewController = AssetsDetailBuilder().builder(asset: asset)
+        let viewController = AssetsDetailBuilder().builder(code: "ITSA4")
         present(viewController, animated: true, completion: nil)
     }
 }

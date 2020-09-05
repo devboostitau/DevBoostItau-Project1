@@ -9,10 +9,19 @@
 import UIKit
 
 class AssetsDetailBuilder {
+    func builder(asset: Investment) -> AssetsDetailViewController {
+        let viewController = UIStoryboard(name: "AssetsDetailViewController", bundle: nil)
+            .instantiateViewController(withIdentifier: "AssetsDetailViewController") as! AssetsDetailViewController
+        viewController.asset = asset
+        return viewController
+    }
+    
+    // TODO: Remover, somente teste.
     func builder(code: String) -> AssetsDetailViewController {
         let viewController = UIStoryboard(name: "AssetsDetailViewController", bundle: nil)
             .instantiateViewController(withIdentifier: "AssetsDetailViewController") as! AssetsDetailViewController
-        viewController.code = code
+//        let asset = Investment()
+//        viewController.asset = asset
         return viewController
     }
 }
@@ -20,9 +29,9 @@ class AssetsDetailBuilder {
 final class AssetsDetailViewController: BaseViewController {
     
     // MARK: Properties
-    let viewModel = AssetsDetailViewModel()
+    var viewModel: AssetsDetailViewModel!
+    var asset: Investment? //TODO: Forçar
     var detail: AssetDetail?
-    var code: String!
     
     // MARK: Outlets
     @IBOutlet weak var labelAssetName: UILabel!
@@ -40,9 +49,11 @@ final class AssetsDetailViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        viewModel = AssetsDetailViewModel(asset: asset)
+        
         setupView()
         bindEvents()
-        viewModel.getAssetsWith(code: code)
+        viewModel.getAssetsWith(code: asset?.brokerCode ?? "ITSA4")
     }
     
     
@@ -56,8 +67,7 @@ final class AssetsDetailViewController: BaseViewController {
     
     // MARK: Methods
     private func bindEvents() {
-        viewModel.onSuccess = { [weak self] assetDetail in
-            self?.detail = assetDetail
+        viewModel.onSuccess = { [weak self] in
             DispatchQueue.main.async {
                 self?.setupView()
             }
@@ -72,28 +82,9 @@ final class AssetsDetailViewController: BaseViewController {
         imgIconClose.tintImage(color: .gray)
         
         labelAssetName.text = detail?.getName
-        labelQuantity.text = "100"
-        labelPricePurchase.text = detail?.getPrice
-        labelDatePurchase.text = "10/01/1988"
-        labelTotalValue.text = detail?.getPrice
+        labelQuantity.text = viewModel.asset?.quantityOfStocks.description
+        labelPricePurchase.text = viewModel.getPricePurchase()
+        labelDatePurchase.text = viewModel.getDatePurchase()
+        labelTotalValue.text = viewModel.getTotalValue()
     }
 }
-
-/*
-
- "MGLU3": {
-     "symbol": "MGLU3",
-     "name": "Magazine Luiza S.A.",
-     "region": "Brazil/Sao Paolo",
-     "currency": "BRL",
-     "market_time": {
-         "open": "10:00",
-         "close": "17:30",
-         "timezone": -3
-     },
-     "market_cap": 144227,
-     "price": 88.77,
-     "change_percent": 0.31,
-     "updated_at": "2020-09-04 20:47:57"
- }
- */
