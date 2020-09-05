@@ -17,6 +17,7 @@
 		BD96DC7F2503B93100D569DA /* HomeViewController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD96DC7E2503B93100D569DA /* HomeViewController.storyboard */; };
 		BD96DC812503B93F00D569DA /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC802503B93F00D569DA /* HomeViewModel.swift */; };
 		BD96DC852503B9C400D569DA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD96DC842503B9C400D569DA /* BaseViewController.swift */; };
+		BDB1F2902503C3E90070079B /* UIColor+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		BD96DC7E2503B93100D569DA /* HomeViewController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = HomeViewController.storyboard; sourceTree = "<group>"; };
 		BD96DC802503B93F00D569DA /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		BD96DC842503B9C400D569DA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extensions.swift"; sourceTree = "<group>"; };
 		E9290691AE47BB0510B01DF5 /* Pods-DevBoostItau-Project1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DevBoostItau-Project1.release.xcconfig"; path = "Target Support Files/Pods-DevBoostItau-Project1/Pods-DevBoostItau-Project1.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +155,7 @@
 		BDB1F28A2503BDBF0070079B /* Commoms */ = {
 			isa = PBXGroup;
 			children = (
+				BDB1F28E2503C3D40070079B /* Extensions */,
 			);
 			path = Commoms;
 			sourceTree = "<group>";
@@ -162,6 +165,14 @@
 			children = (
 			);
 			path = Service;
+			sourceTree = "<group>";
+		};
+		BDB1F28E2503C3D40070079B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BDB1F28F2503C3E90070079B /* UIColor+Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -263,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD96DC852503B9C400D569DA /* BaseViewController.swift in Sources */,
+				BDB1F2902503C3E90070079B /* UIColor+Extensions.swift in Sources */,
 				BD96DC612503B6B700D569DA /* AppDelegate.swift in Sources */,
 				BD96DC6B2503B6B700D569DA /* DevBoostItau_Project1.xcdatamodeld in Sources */,
 				BD96DC7D2503B92800D569DA /* HomeViewController.swift in Sources */,
