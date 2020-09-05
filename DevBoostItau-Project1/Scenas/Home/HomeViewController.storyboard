@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home View Controller-->
+        <scene sceneID="kch-La-b2k">
+            <objects>
+                <viewController storyboardIdentifier="HomeViewController" id="uns-Qr-mpy" customClass="HomeViewController" customModule="DevBoostItau_Project1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MYo-1Q-aOc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Rvp-d0-tmc">
+                                <rect key="frame" x="100" y="244" width="214" height="260"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Ch-cj-cBc">
+                                        <rect key="frame" x="0.0" y="0.0" width="214" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="qPP-LJ-rEw"/>
+                                        </constraints>
+                                        <state key="normal" title="Tela1"/>
+                                        <connections>
+                                            <action selector="handlerButton1:" destination="uns-Qr-mpy" eventType="touchUpInside" id="Xqu-bd-VvW"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0vD-J5-8U1">
+                                        <rect key="frame" x="0.0" y="70" width="214" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="yAH-c2-qJz"/>
+                                        </constraints>
+                                        <state key="normal" title="Tela2"/>
+                                        <connections>
+                                            <action selector="handlerButton2:" destination="uns-Qr-mpy" eventType="touchUpInside" id="nbi-TF-uKC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iux-QL-bsE">
+                                        <rect key="frame" x="0.0" y="140" width="214" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="CNa-by-Ejh"/>
+                                        </constraints>
+                                        <state key="normal" title="Tela3"/>
+                                        <connections>
+                                            <action selector="handlerButton3:" destination="uns-Qr-mpy" eventType="touchUpInside" id="UKS-G1-Fr2"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ibZ-SF-d9P">
+                                        <rect key="frame" x="0.0" y="210" width="214" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="Sjo-dg-oTs"/>
+                                        </constraints>
+                                        <state key="normal" title="Tela4"/>
+                                        <connections>
+                                            <action selector="handlerButton4:" destination="uns-Qr-mpy" eventType="touchUpInside" id="ceX-pu-Ugu"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Rvp-d0-tmc" firstAttribute="top" secondItem="PX2-XQ-DWj" secondAttribute="top" constant="200" id="6bw-OY-C6e"/>
+                            <constraint firstItem="Rvp-d0-tmc" firstAttribute="leading" secondItem="PX2-XQ-DWj" secondAttribute="leading" constant="100" id="Gjv-70-a22"/>
+                            <constraint firstItem="PX2-XQ-DWj" firstAttribute="trailing" secondItem="Rvp-d0-tmc" secondAttribute="trailing" constant="100" id="n0F-mV-jmQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="PX2-XQ-DWj"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dpl-1S-sF5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="83" y="136"/>
+        </scene>
+    </scenes>
+</document>
