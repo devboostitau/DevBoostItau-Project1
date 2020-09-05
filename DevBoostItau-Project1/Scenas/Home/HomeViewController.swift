@@ -13,6 +13,7 @@ final class HomeViewController: BaseViewController {
     // MARK: Properties
     let viewModel = HomeViewModel()
     var menuCards: [CardMenu]?
+    var backImages = [UIImage(named: "money"), UIImage(named: "card"), UIImage(named: "question")]
     
     // MARK: Outlets
     @IBOutlet weak var userNameLabel: UILabel!
@@ -84,7 +85,7 @@ extension HomeViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuCardCell.identifier, for: indexPath) as! MenuCardCell
         if let cards = menuCards {
             let cardMenu = cards[indexPath.row]
-            cell.setupView(cardMenu: cardMenu)
+            cell.setupView(cardMenu: cardMenu, backImage: backImages[indexPath.row])
         }
         
         return cell
