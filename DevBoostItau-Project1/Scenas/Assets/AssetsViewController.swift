@@ -64,4 +64,12 @@ extension AssetsViewController: UITableViewDelegate, UITableViewDataSource{
 
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        // TODO: Pegar Asset clicado
+        
+        let viewController = AssetsDetailBuilder().builder(code: "MGLU3")
+        present(viewController, animated: true, completion: nil)
+    }
 }
