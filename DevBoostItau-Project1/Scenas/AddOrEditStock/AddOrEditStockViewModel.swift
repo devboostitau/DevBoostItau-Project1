@@ -15,7 +15,7 @@ struct Stock: Codable {
     var startDate: String?
 }
 
-final class AddOrEditStockViewModel {
+final class AddOrEditStockViewModel: BaseViewController {
     var stock: Stock?
     
     func saveInfo() {
