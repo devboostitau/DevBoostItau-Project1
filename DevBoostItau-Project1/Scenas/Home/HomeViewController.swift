@@ -12,34 +12,90 @@ final class HomeViewController: BaseViewController {
     
     // MARK: Properties
     let viewModel = HomeViewModel()
+    var menuCards: [CardMenu]?
     
     // MARK: Outlets
-    
+    @IBOutlet weak var userNameLabel: UILabel!
+    @IBOutlet weak var totalInvestmentsLabel: UILabel!
+    @IBOutlet weak var menuCollectionView: UICollectionView!
+    @IBOutlet weak var fundsContainerView: UIView!
     
     // MARK: Overrides
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        setupNavigationBar()
+        setupMenuCards()
+        setupView()
+        setupDelegates()
     }
-    
     
     // MARK: Actions
-    @IBAction func handlerButton1(_ sender: Any) {
+
+    
+    // MARK: Mathods
+    func setupNavigationBar(){
+        self.navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        self.navigationController?.navigationBar.shadowImage = UIImage()
+        self.navigationController?.navigationBar.isTranslucent = true
+        self.navigationController?.view.backgroundColor = .clear
+    }
+    
+    func setupMenuCards() {
+        let investCard = CardMenu(title: "investir", subtitle: "seu dinheiro")
+        let signupCard = CardMenu(title: "cadastrar", subtitle: "cartão")
+        let helpCard = CardMenu(title: "pedir ajuda", subtitle: "fale com um assistente")
+        menuCards = [investCard, signupCard, helpCard]
         
+        menuCollectionView.reloadData()
     }
     
-    @IBAction func handlerButton2(_ sender: Any) {
+    func setupView() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didTapFundsSegue))
+        fundsContainerView.addGestureRecognizer(tapGesture)
+        
+        menuCollectionView.register(MenuCardCell.self, forCellWithReuseIdentifier: MenuCardCell.identifier)
     }
     
-    @IBAction func handlerButton3(_ sender: Any) {
+    func setupDelegates() {
+        menuCollectionView.delegate = self
+        menuCollectionView.dataSource = self
     }
     
-    @IBAction func handlerButton4(_ sender: Any) {
-        let viewController = AssetsDetailBuilder().builder(code: "ITSA4")
-        present(viewController, animated: true, completion: nil)
+    // TODO: Adicionar nome correto da viewcontroller da 2da tela
+    @objc func didTapFundsSegue() {
+        print("didTapFundsSegue tapped")
+        performSegue(withIdentifier: "AssetsSegue", sender: nil)
+//        let viewController = UIStoryboard(name: "?", bundle: nil)
+//            .instantiateViewController(withIdentifier: "?")
+//        present(viewController, animated: true, completion: nil)
+    }
+}
+
+extension HomeViewController: UICollectionViewDelegate {
+    
+}
+
+extension HomeViewController: UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let menuCards = menuCards {
+            return menuCards.count
+        }
+        return 0
     }
     
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: MenuCardCell.identifier, for: indexPath) as! MenuCardCell
+        if let cards = menuCards {
+            let cardMenu = cards[indexPath.row]
+            cell.setupView(cardMenu: cardMenu)
+        }
+        
+        return cell
+    }
     
-    // MARK: Methods
+}
+
+extension HomeViewController: UICollectionViewDelegateFlowLayout {
     
 }
