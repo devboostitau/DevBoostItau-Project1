@@ -20,7 +20,7 @@ class InvestmentsManager {
     
     lazy var fetchedResultsController: NSFetchedResultsController<Investment> = {
         let fetchRequest: NSFetchRequest<Investment> = Investment.fetchRequest()
-        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "purchaseDate", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         let fetchedResultsController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)

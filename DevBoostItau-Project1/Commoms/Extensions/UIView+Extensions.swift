@@ -16,8 +16,8 @@ extension UIView {
          let gradient: CAGradientLayer = CAGradientLayer()
          gradient.frame = self.bounds
          gradient.colors = colors.map { $0.cgColor }
-         gradient.startPoint = style == .horizontal ? CGPoint(x: 0, y: 0.5) : CGPoint(x: 0, y: 0)
-         gradient.endPoint = style == .horizontal ? CGPoint(x: 1.0, y: 0.5) : CGPoint(x: 1, y: 1)
+         gradient.startPoint = style == .horizontal ? CGPoint(x: 0, y: 0.5) : CGPoint(x: 0.5, y: 0)
+         gradient.endPoint = style == .horizontal ? CGPoint(x: 1.0, y: 0.5) : CGPoint(x: 0.5, y: 0.4)
          self.layer.insertSublayer(gradient, at: 0)
     }
 
