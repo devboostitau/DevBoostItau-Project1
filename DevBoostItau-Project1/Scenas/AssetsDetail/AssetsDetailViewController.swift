@@ -15,15 +15,6 @@ class AssetsDetailBuilder {
         viewController.asset = asset
         return viewController
     }
-    
-    // TODO: Remover, somente teste.
-    func builder(code: String) -> AssetsDetailViewController {
-        let viewController = UIStoryboard(name: "AssetsDetailViewController", bundle: nil)
-            .instantiateViewController(withIdentifier: "AssetsDetailViewController") as! AssetsDetailViewController
-//        let asset = Investment()
-//        viewController.asset = asset
-        return viewController
-    }
 }
 
 final class AssetsDetailViewController: BaseViewController {
@@ -43,6 +34,7 @@ final class AssetsDetailViewController: BaseViewController {
     @IBOutlet weak var labelTotalToday: UILabel!
     @IBOutlet weak var labelRentabilityPercent: UILabel!
     @IBOutlet weak var imgIconClose: UIImageView!
+    @IBOutlet weak var viewButtonEdit: UIView!
     
     
     // MARK: Overrides
@@ -80,6 +72,8 @@ final class AssetsDetailViewController: BaseViewController {
     
     private func setupView() {
         imgIconClose.tintImage(color: .gray)
+        viewButtonEdit.layer.cornerRadius = 25
+        viewButtonEdit.applyGradient(style: .vertical, colors: [UIColor.itiOrange, UIColor.itiPink])
         
         labelAssetName.text = detail?.getName
         labelQuantity.text = viewModel.asset?.quantityOfStocks.description
