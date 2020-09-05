@@ -115,7 +115,7 @@
                     </constraints>
                 </stackView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mBP-JG-IES">
-                    <rect key="frame" x="16" y="796" width="382" height="50"/>
+                    <rect key="frame" x="16" y="812" width="382" height="50"/>
                     <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="ITg-1f-s3K"/>
@@ -154,7 +154,7 @@
                 <constraint firstItem="1Ee-3m-M9m" firstAttribute="top" secondItem="2F8-1x-PRn" secondAttribute="bottom" constant="32" id="dBB-aY-9NX"/>
                 <constraint firstItem="2F8-1x-PRn" firstAttribute="top" secondItem="S8E-cr-bfk" secondAttribute="bottom" constant="8" id="dTb-8k-Blj"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1Ee-3m-M9m" secondAttribute="trailing" constant="16" id="erp-26-DdN"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mBP-JG-IES" secondAttribute="bottom" constant="16" id="nDC-4E-Wh0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mBP-JG-IES" secondAttribute="bottom" id="nDC-4E-Wh0"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="2F8-1x-PRn" secondAttribute="trailing" constant="16" id="pAt-e5-z5l"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
