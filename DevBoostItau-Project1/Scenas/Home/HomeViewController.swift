@@ -35,9 +35,11 @@ final class HomeViewController: BaseViewController {
     }
     
     @IBAction func handlerButton4(_ sender: Any) {
+        let viewController = AssetsDetailBuilder().builder()
+        present(viewController, animated: true, completion: nil)
     }
     
     
-    // MARK: Mathods
+    // MARK: Methods
     
 }
